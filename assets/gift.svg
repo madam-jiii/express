@@ -1,0 +1,71 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="500" height="600">
+  <defs>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#f8f8f8"/>
+      <stop offset="1" stop-color="#e8e8e8"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a90012"/>
+      <stop offset="0.3" stop-color="#ff2638"/>
+      <stop offset="0.6" stop-color="#e00019"/>
+      <stop offset="1" stop-color="#99000e"/>
+    </linearGradient>
+    <linearGradient id="ribbonHighlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff7777"/>
+      <stop offset="0.4" stop-color="#ed001b"/>
+      <stop offset="1" stop-color="#a90013"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="250" cy="555" rx="165" ry="15" fill="#999" opacity=".2" filter="url(#shadow)"/>
+
+  <!-- Gift box body -->
+  <rect x="80" y="310" width="340" height="235" rx="8" fill="url(#box)" stroke="#dedede" stroke-width="2"/>
+
+  <!-- Single vertical ribbon -->
+  <rect x="218" y="290" width="64" height="255" fill="url(#red)"/>
+  <rect x="224" y="310" width="5" height="235" fill="#ff8585" opacity=".3"/>
+  <rect x="272" y="310" width="5" height="235" fill="#70000c" opacity=".25"/>
+
+  <!-- Lid -->
+  <rect x="65" y="275" width="370" height="65" rx="5" fill="url(#box)" stroke="#dedede" stroke-width="2"/>
+
+  <!-- Ribbon on lid -->
+  <rect x="218" y="275" width="64" height="65" fill="url(#red)"/>
+
+  <!-- Left bow loop -->
+  <path d="M250 155 C205 65 105 75 125 145 C138 195 200 200 250 175 Z"
+        fill="url(#ribbonHighlight)" stroke="#b40016" stroke-width="2"/>
+  <path d="M225 150 C190 100 145 95 140 130"
+        fill="none" stroke="#ff9292" stroke-width="5" opacity=".65"/>
+
+  <!-- Right bow loop -->
+  <path d="M250 155 C295 65 395 75 375 145 C362 195 300 200 250 175 Z"
+        fill="url(#ribbonHighlight)" stroke="#b40016" stroke-width="2"/>
+  <path d="M275 150 C310 100 355 95 360 130"
+        fill="none" stroke="#ff9292" stroke-width="5" opacity=".65"/>
+
+  <!-- Bow tails -->
+  <path d="M235 165 L130 270 L165 260 L190 290 L255 180 Z"
+        fill="url(#red)" stroke="#a90012" stroke-width="2"/>
+  <path d="M265 165 L370 270 L335 260 L310 290 L245 180 Z"
+        fill="url(#red)" stroke="#a90012" stroke-width="2"/>
+
+  <!-- Bow center -->
+  <path d="M225 135 Q250 120 275 135 L280 180 Q250 200 220 180 Z"
+        fill="url(#red)" stroke="#a90012" stroke-width="2"/>
+  <path d="M233 140 Q250 132 267 140"
+        fill="none" stroke="#ff9999" stroke-width="4" opacity=".6"/>
+
+  <!-- Bow highlights -->
+  <path d="M135 130 Q165 100 205 145"
+        fill="none" stroke="#ffaaaa" stroke-width="4" opacity=".5"/>
+  <path d="M365 130 Q335 100 295 145"
+        fill="none" stroke="#ffaaaa" stroke-width="4" opacity=".5"/>
+</svg>
