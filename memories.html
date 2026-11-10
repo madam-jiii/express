@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Little Love Memories ❤️</title>
+  <link rel="stylesheet" href="memories.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div class="hearts-bg" id="heartsBg"></div>
+
+  <audio id="bgMusic" src="assets/music.mp3" preload="auto"></audio>
+
+  <div class="modal-overlay active" id="introModal">
+    <div class="modal-content intro-content">
+      <h2 class="completion-title">A little something for you 💌</h2>
+      <p class="intro-text">Tap continue to begin our little journey together.</p>
+      <button id="continueBtn" class="restart-btn">Continue ❤️</button>
+    </div>
+  </div>
+
+  <header class="gallery-header" data-aos="fade-down" data-aos-duration="900">
+    <h1 class="gallery-title">Little Memories</h1>
+    <p class="gallery-subtitle">Tap a card to flip it, then tap again to let it go 💌</p>
+  </header>
+
+  <main class="memory-stack" id="memoryStack">
+    <div class="memory-card" data-exit="left">
+      <div class="memory-inner">
+        <div class="memory-front">
+          <img src="assets/gift.svg" alt="Love memory 1">
+        </div>
+        <div class="memory-back">
+          <p>You make my world brighter. ❤️</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="memory-card" data-exit="right">
+      <div class="memory-inner">
+        <div class="memory-front">
+          <img src="assets/gift.svg" alt="Love memory 2">
+        </div>
+        <div class="memory-back">
+          <p>Every moment with you is special. ✨</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="memory-card" data-exit="up">
+      <div class="memory-inner">
+        <div class="memory-front">
+          <img src="assets/gift.svg" alt="Love memory 3">
+        </div>
+        <div class="memory-back">
+          <p>You're my favorite notification. 💕</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="memory-card" data-exit="down">
+      <div class="memory-inner">
+        <div class="memory-front">
+          <img src="assets/gift.svg" alt="Love memory 4">
+        </div>
+        <div class="memory-back">
+          <p>I would choose you in every lifetime. 💞</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="memory-card" data-exit="left">
+      <div class="memory-inner">
+        <div class="memory-front">
+          <img src="assets/gift.svg" alt="Love memory 5">
+        </div>
+        <div class="memory-back">
+          <p>You are my happiness. ❤️</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="memory-card" data-exit="right">
+      <div class="memory-inner">
+        <div class="memory-front">
+          <img src="assets/gift.svg" alt="Love memory 6">
+        </div>
+        <div class="memory-back">
+          <p>My favorite place is beside you. 🏡💖</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="completionModal">
+    <div class="modal-content completion-content">
+      <div class="confetti-container" id="confettiContainer"></div>
+      <div class="completion-hearts" id="completionHearts"></div>
+      <h2 class="completion-title">You've unlocked all my little love messages! ❤️</h2>
+      <button id="restartBtn" class="restart-btn">Restart ❤️</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="memories.js"></script>
+</body>
+</html>
