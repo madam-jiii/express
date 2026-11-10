@@ -22,6 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
     'gifs/gif5.gif'
   ];
 
+  const noTexts = [
+    'Will You Be Mine? ❤️',
+    "Are you sure? 🥺",
+    "Please think again... 💔",
+    "Don't do this to me 😢",
+    "You're breaking my heart 💔",
+    "Last chance... 🥹"
+  ];
+
   const yesSizes = [
     { padding: '14px 36px', font: '1.2rem' },
     { padding: '16px 44px', font: '1.35rem' },
@@ -31,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const proposalGif = document.getElementById('proposalGif');
+  const heading = document.querySelector('.heading');
   const yesBtn = document.getElementById('yesBtn');
   const noBtn = document.getElementById('noBtn');
   const celebrationModal = document.getElementById('celebrationModal');
@@ -54,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 250);
   };
 
+  const changeHeading = (text) => {
+    heading.classList.add('fade-out');
+    setTimeout(() => {
+      heading.textContent = text;
+      heading.classList.remove('fade-out');
+    }, 250);
+  };
+
   const applyYesSize = (index) => {
     const size = yesSizes[index];
     yesBtn.style.padding = size.padding;
@@ -66,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (noClickCount >= 4) return;
 
     noClickCount++;
+
+    changeHeading(noTexts[noClickCount]);
 
     if (noClickCount === 1) {
       changeGif(gifs[1]);
@@ -103,9 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       song.pause();
       song.currentTime = 0;
-    } catch (err) {
-      // ignore
-    }
+    } catch (err) {}
   };
 
   yesBtn.addEventListener('click', () => {
